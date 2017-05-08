@@ -40,6 +40,7 @@
   <modules>
     <module>parent_toplevel</module>
     <module>public_site</module>
+    <module>conga</module>
   </modules>
 
   <build>

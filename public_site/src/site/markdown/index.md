@@ -2,6 +2,8 @@
 
 Training materials for wcm.io and subprojects.
 
+All trainings are provided by [pro!vision GmbH](https://www.pro-vision.de/).
+
 
 ### Trainings
 

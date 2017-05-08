@@ -52,7 +52,7 @@
         <name>wcm.io Training</name>
         <href>http://training.wcm.io</href>
       </brand>
-      <slogan>wcm.io Training</slogan>
+      <slogan>Training materials for wcm.io and subprojects.</slogan>
       <titleTemplate>%2$s | %1$s</titleTemplate>
       <!-- Use Table of Contents as sidebar -->
       <toc>sidebar</toc>
