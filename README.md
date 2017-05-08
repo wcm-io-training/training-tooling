@@ -2,3 +2,5 @@
 ======
 
 Tooling for wcm.io Training website
+
+[http://training.wcm.io/](http://training.wcm.io/)
