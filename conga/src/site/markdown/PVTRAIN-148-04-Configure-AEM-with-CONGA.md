@@ -10,7 +10,7 @@
 
 *   [https://github.com/wcm-io-training/training-conga-exercise-aem](https://github.com/wcm-io-training/training-conga-exercise-aem)
 
-### Overview
+### Introduction
 
 The GIT project contains CONGA configuration definitions and two CONGA example environments:
 
