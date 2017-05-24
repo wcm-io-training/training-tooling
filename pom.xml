@@ -41,6 +41,7 @@
     <module>parent_toplevel</module>
     <module>public_site</module>
     <module>conga</module>
+    <module>caconfig</module>
   </modules>
 
   <build>

@@ -8,6 +8,7 @@ All trainings are provided by [pro!vision GmbH](https://www.pro-vision.de/).
 ### Trainings
 
 * [CONGA Training](conga/)
+* [AEM Context-Aware Configuration](caconfig/)
 
 
 ### Subprojects
