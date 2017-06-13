@@ -24,10 +24,10 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>io.wcm.maven</groupId>
-    <artifactId>io.wcm.maven.global-parent</artifactId>
-    <version>14</version>
-    <relativePath />
+    <groupId>io.wcm.training</groupId>
+    <artifactId>io.wcm.training.parent_toplevel</artifactId>
+    <version>1-SNAPSHOT</version>
+    <relativePath>parent_toplevel/pom.xml</relativePath>
   </parent>
 
   <groupId>io.wcm.qa</groupId>
