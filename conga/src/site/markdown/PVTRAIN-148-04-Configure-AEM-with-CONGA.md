@@ -9,7 +9,6 @@
 ### Git project
 
 *   [https://github.com/wcm-io-training/training-conga-exercise-aem](https://github.com/wcm-io-training/training-conga-exercise-aem)
-    * Special Maven settings required, see README for details
 
 ### Introduction
 
