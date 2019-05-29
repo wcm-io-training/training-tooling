@@ -60,8 +60,8 @@ Validation:
 
 Exercise:
 
-1.  Citytech (recently aquired by Olsen Digital) has published a nice tool for AEM: The "AEM Groovy Console": [https://github.com/OlsonDigital/aem-groovy-console](https://github.com/OlsonDigital/aem-groovy-console)
-2.  The AEM ZIP package for deploying it is also available on Maven Central: [http://repo1.maven.org/maven2/com/icfolson/aem/groovy/console/aem-groovy-console/12.0.0/](http://repo1.maven.org/maven2/com/icfolson/aem/groovy/console/aem-groovy-console/12.0.0/)
+1.  Citytech (recently aquired by Olsen Digital, now ICF Next) has published a nice tool for AEM: The "AEM Groovy Console": [https://github.com/icfnext/aem-groovy-console](https://github.com/icfnext/aem-groovy-console)
+2.  The AEM ZIP package for deploying it is also available on Maven Central: [https://repo1.maven.org/maven2/com/icfolson/aem/groovy/console/aem-groovy-console/13.0.0/](https://repo1.maven.org/maven2/com/icfolson/aem/groovy/console/aem-groovy-console/13.0.0/)
 3.  Please extend the role `wcm-io-samples-cms` to include a deployment of this Groovy Console Package
 4.  Make the deployment of this file conditional using a configuration parameter, similar as it is already done for the sample content in the same role
 5.  Deploy the Groovy Console only for the author node of the local environment `development.yaml`
@@ -69,7 +69,7 @@ Exercise:
 
 Validation:
 
-*   Open [http://localhost:4502/etc/groovyconsole.html](http://localhost:4502/etc/groovyconsole.html) - the Groovy Console should be displayed
+*   Open [http://localhost:4502/apps/groovyconsole.html](http://localhost:4502/apps/groovyconsole.html) - the Groovy Console should be displayed
 
 #### D) Reconfigure wcm.io DAM Asset Service
 
