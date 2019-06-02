@@ -16,6 +16,6 @@ Exercises: [PVTRAIN-148 CONGA exercises](PVTRAIN-148-CONGA-exercises.html)
 
 ### Further links
 
-*   [CONGA Sling Plugin](http://devops.wcm.io/conga/plugins/sling/)
-*   [CONGA AEM Plugin](http://devops.wcm.io/conga/plugins/aem/)
-*   [CONGA AEM Definitions](http://devops.wcm.io/conga/definitions/aem/)
+*   [CONGA Sling Plugin](https://devops.wcm.io/conga/plugins/sling/)
+*   [CONGA AEM Plugin](https://devops.wcm.io/conga/plugins/aem/)
+*   [CONGA AEM Definitions](https://devops.wcm.io/conga/definitions/aem/)

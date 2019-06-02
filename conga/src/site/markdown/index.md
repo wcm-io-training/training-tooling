@@ -1,6 +1,6 @@
 ## CONGA Training
 
-Training materials for [wcm.io DevOps CONGA](http://devops.wcm.io/conga/).
+Training materials for [wcm.io DevOps CONGA](https://devops.wcm.io/conga/).
 
 ### Training modules
 

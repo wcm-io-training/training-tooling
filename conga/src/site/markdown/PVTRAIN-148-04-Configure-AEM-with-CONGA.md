@@ -31,7 +31,7 @@ Exercise:
 
 1.  Execute `mvn clean install` on the root of the training repository
 2.  Deploy the application and configuration to your local AEM instance via the script `definition/development-deploy-packages.sh`
-    *   This Script uses the [CONGA AEM Maven Plugin](http://devops.wcm.io/conga/plugins/aem/) to deploy the generated AEM packages to your local AEM instance running at port 4502
+    *   This Script uses the [CONGA AEM Maven Plugin](https://devops.wcm.io/conga/plugins/aem/) to deploy the generated AEM packages to your local AEM instance running at port 4502
 
 Validation:
 

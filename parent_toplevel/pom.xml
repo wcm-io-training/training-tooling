@@ -49,7 +49,7 @@
 
   <organization>
     <name>wcm.io Training</name>
-    <url>http://training.wcm.io</url>
+    <url>https://training.wcm.io</url>
   </organization>
 
   <issueManagement>
@@ -85,7 +85,7 @@
 
     <!-- site settings -->
     <site.url.module.prefix>tooling/parent_toplevel</site.url.module.prefix>
-    <site.url>http://training.wcm.io</site.url>
+    <site.url>https://training.wcm.io</site.url>
     <site.deploy.id>ssh-wcm.io</site.deploy.id>
     <site.deploy.url></site.deploy.url>
 

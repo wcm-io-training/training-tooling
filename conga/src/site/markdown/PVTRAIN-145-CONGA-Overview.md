@@ -20,5 +20,5 @@ Exercises: [PVTRAIN-148 CONGA exercises](PVTRAIN-148-CONGA-exercises.html)
 
 ### Further links
 
-*   [CONGA Website](http://devops.wcm.io/conga/)
+*   [CONGA Website](https://devops.wcm.io/conga/)
 *   [adaptTo() 2015: CONGA - Configuration generation for Sling and AEM](http://adapt.to/2015/en/schedule/conga---configuration-generation-for-sling-and-aem.html)

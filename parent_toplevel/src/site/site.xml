@@ -26,7 +26,7 @@
 
   <bannerLeft>
     <name><![CDATA[<img src="http://wcm.io/images/favicon-16@3x.png"/> wcm.io Training]]></name>
-    <href>http://training.wcm.io</href>
+    <href>https://training.wcm.io</href>
   </bannerLeft>
 
   <publishDate position="bottom" format="yyyy-MM-dd" />
@@ -35,7 +35,7 @@
   <skin>
     <groupId>io.wcm.maven.skins</groupId>
     <artifactId>reflow-maven-skin</artifactId>
-    <version>1.0.6</version>
+    <version>1.0.7-SNAPSHOT</version>
   </skin>
   <custom>
     <reflowSkin>
@@ -45,12 +45,12 @@
       <theme>default</theme>
       <highlightJs>true</highlightJs>
       <highlightJsTheme>github</highlightJsTheme>
-      <absoluteResourceURL>http://training.wcm.io</absoluteResourceURL>
+      <absoluteResourceURL>https://training.wcm.io</absoluteResourceURL>
       <skinAttribution>false</skinAttribution>
       <brand>
         <!-- Brand text in top-left part of the site -->
         <name>wcm.io Training</name>
-        <href>http://training.wcm.io</href>
+        <href>https://training.wcm.io</href>
       </brand>
       <slogan>Training materials for wcm.io and subprojects.</slogan>
       <titleTemplate>%2$s | %1$s</titleTemplate>
@@ -109,20 +109,20 @@
     </links>
 
     <breadcrumbs>
-      <item name="wcm.io Training" href="http://training.wcm.io" />
+      <item name="wcm.io Training" href="https://training.wcm.io" />
     </breadcrumbs>
 
     <menu name="Main" inherit="top">
-      <item name="Home" href="http://training.wcm.io" />
+      <item name="Home" href="https://training.wcm.io" />
       <item name="Platforms" href="http://wcm.io/platforms.html" />
       <item name="Maven Repositories" href="http://wcm.io/maven.html" />
       <item name="GitHub project" href="http://github.com/wcm-io-training" />
       <item name="Subprojects" href="http://wcm.io/subprojects.html" />
-      <item name="License" href="http://training.wcm.io/license.html" />
+      <item name="License" href="https://training.wcm.io/license.html" />
       <item name="Imprint" href="http://wcm.io/imprint.html" />
     </menu>
     <menu name="Trainings" inherit="top">
-      <item name="CONGA" href="http://training.wcm.io/conga/"/>
+      <item name="CONGA" href="https://training.wcm.io/conga/"/>
     </menu>
     <menu name="Contribute" inherit="top">
       <item name="Contribute" href="http://wcm.io/contribute.html" />
