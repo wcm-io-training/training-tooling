@@ -19,4 +19,4 @@ Exercises: [PVTRAIN-168 Context-Aware Configuration exercises](PVTRAIN-168-Conte
 
 ### Further links
 
-*   [http://wcm.io/caconfig/](http://wcm.io/caconfig/)
+*   [https://wcm.io/caconfig/](https://wcm.io/caconfig/)

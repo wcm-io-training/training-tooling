@@ -21,7 +21,7 @@ The first one is used for testing in the local AEM instance. You will only touch
 
 The second one is an example for a PROD environment - it is not used in the exercise, but you can have a look what different configuration is generated for the different environment files.
 
-Please not that typically the configuration definition is part of the application Maven module structure and released together with it. For the sake of simplicity no AEM application is included in this training repository, instead the application packages from the [wcm.io Sample Application](http://wcm.io/samples/) are used, which are available on Maven Central. The wcm.io Sample Application itself also contains a CONGA configuration definition, but this is not used in this exercise.
+Please not that typically the configuration definition is part of the application Maven module structure and released together with it. For the sake of simplicity no AEM application is included in this training repository, instead the application packages from the [wcm.io Sample Application](https://wcm.io/samples/) are used, which are available on Maven Central. The wcm.io Sample Application itself also contains a CONGA configuration definition, but this is not used in this exercise.
 
 ### Exercise
 
@@ -75,7 +75,7 @@ Validation:
 
 Exercise:
 
-1.  The [wcm.io DAM Asset Service](http://wcm.io/dam/asset-service/) is a JSON REST interface for getting rendition information for assets in AEM.
+1.  The [wcm.io DAM Asset Service](https://wcm.io/dam/asset-service/) is a JSON REST interface for getting rendition information for assets in AEM.
 2.  Example URL based on the sample content: [http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.wcm-io-asset-service.json/width=1000,height=300/width=500,height=150.json](http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.wcm-io-asset-service.json/width=1000,height=300/width=500,height=150.json)
 3.  Task: we want to reconfigure the selector `wcm-io-asset-service` to a new value `sample-asset-service`
 4.  If you look in [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) you will find a configuration "wcm.io DAM Asset Service" which has a configuration parameter labelled with "Asset Selector" - this should be set to `sample-asset-service`

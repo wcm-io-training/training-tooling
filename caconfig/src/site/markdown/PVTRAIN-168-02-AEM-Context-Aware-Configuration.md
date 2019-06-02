@@ -33,9 +33,9 @@ There are no context paths configured, so the configuration editor is not functi
 
 Exercise:
 
-1.  Configure a [wcm.io Context Path Strategy](http://wcm.io/caconfig/extensions/context-path-strategies.html) for levels 1..5 for the template `/apps/pv-training/caconfig/templates/homepage`
+1.  Configure a [wcm.io Context Path Strategy](https://wcm.io/caconfig/extensions/context-path-strategies.html) for levels 1..5 for the template `/apps/pv-training/caconfig/templates/homepage`
     *   Derive conf path from content path by replacing "/content" with "/conf"
-2.  Configure a [wcm.io Persistence Strategy](http://wcm.io/caconfig/extensions/persistence-strategies.html) for storing configurations as AEM Pages at `/conf`
+2.  Configure a [wcm.io Persistence Strategy](https://wcm.io/caconfig/extensions/persistence-strategies.html) for storing configurations as AEM Pages at `/conf`
 3.  Define the configurations for both in `config-definition/src/main/templates/pv-training-caconfig-aem-cms/pv-training-caconfig-aem-cms-config.provisioning.hbs`
     *   Keep in mind you have to execute `clean_install_deploy_package.sh` again to get this configuration active in the AEM instance
 
@@ -55,7 +55,7 @@ Validation:
 Exercise:
 
 1.  Edit the configuration definition `de.provision.training.caconfig.aem.config.LinkList` and add labels and descriptions for the configuration class and for each property
-2.  Define a custom path browser widget for the [wcm.io Context-Aware Configuraiton Editor](http://wcm.io/caconfig/editor/usage.html) with starts with the current configuration context path as root path for the property `pagePath`
+2.  Define a custom path browser widget for the [wcm.io Context-Aware Configuraiton Editor](https://wcm.io/caconfig/editor/usage.html) with starts with the current configuration context path as root path for the property `pagePath`
 
 Validation:
 
@@ -67,9 +67,9 @@ Validation:
 
 Exercise:
 
-1.  Configure an **additional** [wcm.io Persistence Strategy](http://wcm.io/caconfig/extensions/persistence-strategies.html) for storing configurations as AEM Pages at `/tools/config` Pages relative to the site root as part of the content
+1.  Configure an **additional** [wcm.io Persistence Strategy](https://wcm.io/caconfig/extensions/persistence-strategies.html) for storing configurations as AEM Pages at `/tools/config` Pages relative to the site root as part of the content
     *   This strategy gets only active for context paths with `/tools/config` in the path
-2.  Configure an **additional** [wcm.io Context Path Strategy](http://wcm.io/caconfig/extensions/context-path-strategies.html):
+2.  Configure an **additional** [wcm.io Context Path Strategy](https://wcm.io/caconfig/extensions/context-path-strategies.html):
     *   This strategy should only be applied for content/context paths at `/content/pv-training-caconfig/tenant-1/germany` and below (only the German market)
     *   This strategy should derive an additional config reference at `<context-root-path>/tools/config/jcr:content`, e.g. `/content/pv-training-caconfig/tenant-1/germany/tools/config/jcr:content`
     *   To make sure this strategy has higher precedence for the German market assign it a higher service ranking value than the other strategy

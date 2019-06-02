@@ -1,6 +1,6 @@
 ## AEM Context-Aware Configuration Training
 
-Training materials for [wcm.io Context-Aware Configuration](http://wcm.io/caconfig/) editor and extensions.
+Training materials for [wcm.io Context-Aware Configuration](https://wcm.io/caconfig/) editor and extensions.
 
 ### Training modules
 
