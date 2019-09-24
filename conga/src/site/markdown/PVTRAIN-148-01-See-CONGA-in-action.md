@@ -31,12 +31,12 @@
 
     *   `environment/target/configuration/dev/localhost`
 
-#### Deploy generated configuration to Tomcat 8
+#### Deploy generated configuration to Tomcat
 
-1.  [Download Tomcat 8](https://tomcat.apache.org/download-80.cgi) ("Core ZIP" version) and extract to local hard drive
+1.  [Download Tomcat 9](https://tomcat.apache.org/download-90.cgi) ("Core ZIP" version) and extract to local file system
 2.  Check `environment/src/main/environments/dev.yml` and update the `jvm.path` and `tomcat.path` variables to your local Java and Tomcat paths.
 3.  Regenerate the CONGA configuration
 4.  Copy the generated configuration from `environment/target/configuration/dev/localhost` to your local Tomcat path
     *   This also includes the sample application (sample-app.war)
-5.  Start Tomcat 8 via `startup.bat` (Windows) / `startup.sh` (Unix-based systems)
+5.  Start Tomcat via `startup.bat` (Windows) / `startup.sh` (Unix-based systems)
 6.  Open URL [http://localhost:8080/sample-app/](http://localhost:8080/sample-app/)
