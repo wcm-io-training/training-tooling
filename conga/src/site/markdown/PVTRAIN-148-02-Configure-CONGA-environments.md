@@ -24,8 +24,8 @@
 ### Validation
 
 *   Regenerate the configuration
-*   Check that all parameters were written to the files as expected (both setenv batch files and sample-app.xml deployment descriptor)
-*   Deploy at least one of the two prod node config tos your local Tomcat
+*   Check that all parameters were written to the files as expected (both setenv shell files and sample-app.xml deployment descriptor)
+*   Deploy at least one of the two prod node config to your local Tomcat
 *   Restart Tomcat
 *   Open [http://localhost:8080/sample-app/](http://localhost:8080/sample-app/)
 *   Check that the welcome message is updated, and total memory is increased according to the setting for the node
