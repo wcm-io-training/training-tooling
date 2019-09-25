@@ -34,7 +34,7 @@
 #### Deploy generated configuration to Tomcat
 
 1.  [Download Tomcat 9](https://tomcat.apache.org/download-90.cgi) ("Core ZIP" version) and extract to local file system
-2.  Check `environment/src/main/environments/dev.yml` and update the `jvm.path` and `tomcat.path` variables to your local Java and Tomcat paths.
+2.  Check `environment/src/main/environments/dev.yaml` and update the `jvm.path` and `tomcat.path` variables to your local Java and Tomcat paths.
 3.  Regenerate the CONGA configuration
 4.  Copy the generated configuration from `environment/target/configuration/dev/localhost` to your local Tomcat path
     *   This also includes the sample application (sample-app.war)
