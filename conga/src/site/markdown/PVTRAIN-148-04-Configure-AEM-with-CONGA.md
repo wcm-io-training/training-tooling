@@ -30,7 +30,7 @@ Please not that typically the configuration definition is part of the applicatio
 Exercise:
 
 1.  Execute `mvn clean install` on the root of the training repository
-2.  Deploy the application and configuration to your local AEM instance via the script `definition/development-deploy-packages.sh`
+2.  Deploy the application and configuration to your local AEM instance via the script `definition/packages-upload.sh`
     *   This Script uses the [CONGA AEM Maven Plugin](https://devops.wcm.io/conga/plugins/aem/) to deploy the generated AEM packages to your local AEM instance running at port 4502
 
 Validation:
@@ -71,21 +71,30 @@ Validation:
 
 *   Open [http://localhost:4502/apps/groovyconsole.html](http://localhost:4502/apps/groovyconsole.html) - the Groovy Console should be displayed
 
-#### D) Reconfigure wcm.io DAM Asset Service
+#### D) Restrict Access to Groovy Console to Administrators
+
+Preparation - create two new users:
+
+* Create a new non-admin user "author" with password "author" at http://localhost:4502/security/users.html
+  * Assign this user to group "Authors" (content-authors)
+* Create a new admin user "admin2" with password "admin2" at http://localhost:4502/security/users.html
+  * Assign this user to group "Administrators" (administrators)
 
 Exercise:
 
-1.  The [wcm.io DAM Asset Service](https://wcm.io/dam/asset-service/) is a JSON REST interface for getting rendition information for assets in AEM.
-2.  Example URL based on the sample content: [http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.wcm-io-asset-service.json/width=1000,height=300/width=500,height=150.json](http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.wcm-io-asset-service.json/width=1000,height=300/width=500,height=150.json)
-3.  Task: we want to reconfigure the selector `wcm-io-asset-service` to a new value `sample-asset-service`
-4.  If you look in [http://localhost:4502/system/console/configMgr](http://localhost:4502/system/console/configMgr) you will find a configuration "wcm.io DAM Asset Service" which has a configuration parameter labelled with "Asset Selector" - this should be set to `sample-asset-service`
-5.  Enhance the role `wcm-io-samples-cms` to generate additional OSGi configuration for this service that reconfigured this property
-6.  Redeploy the application and configuration to your local AEM instance
+1.  If you look in http://localhost:4502/system/console/configMgr you will find a configuration "Groovy Console Configuration Service" which has a configuration parameter labeled with "Allowed Groups" - we want to set this to `administrators` to restrict the access to the Groovy console
+2.  Enhance the role `wcm-io-samples-cms` to generate an additional OSGi configuration for this service that reconfigures this property to the desired value
+3.  Redeploy the application and configuration to your local AEM instance
 
 Validation:
 
-*   The URL [http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.wcm-io-asset-service.json/width=1000,height=300/width=500,height=150.json](http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.wcm-io-asset-service.json/width=1000,height=300/width=500,height=150.json) does no longer return the JSON result
-*   Instead the URL [http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.sample-asset-service.json/width=1000,height=300/width=500,height=150.json](http://localhost:4502/content/dam/wcm-io-samples/content/stageheader-outside2.jpg.sample-asset-service.json/width=1000,height=300/width=500,height=150.json) returns the result
+*  Log into AEM using the author user
+*  Open the Groovy Console http://localhost:4502/apps/groovyconsole.html - you should not longer be allowed to open or execute scripts
+*  Log into AEM using the admin2 user
+*  Open the Groovy Console http://localhost:4502/apps/groovyconsole.html - you can open scripts and execute them
+  * e.g. the "samples/ListTemplates.groovy" script - you have to replace `/content/we-retail` with `/content/wcm-io-samples/en`
+
+Please note: once an allowed group is configured the "admin" user itself cannot longer execute scripts - this is a bug in the Groovy Console ([#86](https://github.com/icfnext/aem-groovy-console/issues/86)). That's why we use "admin2" for validation.
 
 #### E) Add additional logfile for JCR Query Debugging
 
