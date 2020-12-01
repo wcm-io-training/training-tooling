@@ -59,7 +59,7 @@
 
   <ciManagement>
     <system>Travis CI</system>
-    <url>https://travis-ci.org/wcm-io-training</url>
+    <url>https://travis-ci.com/wcm-io-training</url>
   </ciManagement>
 
   <developers>
