@@ -57,11 +57,6 @@
     <url>https://wcm-io.atlassian.net/browse/</url>
   </issueManagement>
 
-  <ciManagement>
-    <system>Travis CI</system>
-    <url>https://travis-ci.com/wcm-io-training</url>
-  </ciManagement>
-
   <developers>
     <developer>
       <name>wcm.io Community</name>
@@ -87,7 +82,7 @@
     <site.url.module.prefix>tooling/parent_toplevel</site.url.module.prefix>
     <site.url>https://training.wcm.io</site.url>
     <site.deploy.id>ssh-wcm.io</site.deploy.id>
-    <site.deploy.url></site.deploy.url>
+    <site.deploy.url>scm:git:https://github.com/wcm-io-training/wcm-io-training.github.io.git</site.deploy.url>
 
   </properties>
 
@@ -199,7 +194,8 @@
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-javadoc-plugin</artifactId>
           <configuration>
-            <excludePackageNames>*.impl</excludePackageNames>
+            <excludePackageNames>*.impl:*.impl.*</excludePackageNames>
+            <notimestamp>true</notimestamp>
           </configuration>
         </plugin>
 
@@ -250,6 +246,19 @@
           <!-- Do not generate links to teamlist reports -->
           <teamlist>none</teamlist>
         </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.jacoco</groupId>
+        <artifactId>jacoco-maven-plugin</artifactId>
+        <reportSets>
+          <reportSet>
+            <reports>
+              <!-- select non-aggregate reports -->
+              <report>report</report>
+            </reports>
+          </reportSet>
+        </reportSets>
       </plugin>
 
     </plugins>
@@ -304,7 +313,7 @@
     <site>
       <id>${site.deploy.id}</id>
       <name>Maven Site Deployment</name>
-      <url>${site.deploy.url}${site.url.module.prefix}</url>
+      <url>${site.deploy.url}/${site.url.module.prefix}</url>
     </site>
   </distributionManagement>
 

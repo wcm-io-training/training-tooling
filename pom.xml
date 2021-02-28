@@ -56,12 +56,21 @@
         </configuration>
       </plugin>
 
-      <!-- do not generate site for this project -->
+      <!-- do generate site for this project, but push it into a separate staging directory because we are not using it -->
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-site-plugin</artifactId>
         <configuration>
           <skipDeploy>true</skipDeploy>
+          <stagingDirectory>${project.build.directory}/staging-not-used</stagingDirectory>
+        </configuration>
+      </plugin>
+
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-scm-publish-plugin</artifactId>
+        <configuration>
+          <skipDeletedFiles>true</skipDeletedFiles>
         </configuration>
       </plugin>
 
@@ -69,19 +78,23 @@
     <pluginManagement>
       <plugins>
 
-        <!-- license check -->
         <plugin>
-          <groupId>org.codehaus.mojo</groupId>
-          <artifactId>license-maven-plugin</artifactId>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-site-plugin</artifactId>
           <configuration>
-            <licenseName>apache_v2</licenseName>
-            <addJavaLicenseAfterPackage>false</addJavaLicenseAfterPackage>
-            <projectName>wcm.io</projectName>
+            <topSiteURL>${site.deploy.url}</topSiteURL>
           </configuration>
         </plugin>
 
       </plugins>
     </pluginManagement>
   </build>
+
+  <distributionManagement>
+    <site>
+      <id>${site.deploy.id}</id>
+      <url>${site.deploy.url}</url>
+    </site>
+  </distributionManagement>
 
 </project>
