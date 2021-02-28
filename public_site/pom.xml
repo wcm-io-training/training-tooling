@@ -39,6 +39,11 @@
   <description>Project contains the public website content for the training.wcm.io site root.</description>
   <url>${site.url}</url>
   
+  <ciManagement>
+    <system>GitHub Actions</system>
+    <url>https://github.com/wcm-io-training/training-tooling/actions</url>
+  </ciManagement>
+
   <distributionManagement>
     <site>
       <id>${site.deploy.id}</id>
