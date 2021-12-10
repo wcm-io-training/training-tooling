@@ -1,4 +1,4 @@
-## PVTRAIN-146 AEM Configuration with CONGA
+## DATM-58 AEM Configuration with CONGA
 
 ### Agenda
 
@@ -10,9 +10,9 @@
 
 ### Training Material
 
-Presentation: [PVTRAIN-146_AEM-Configuration-with-CONGA.pdf](slides/PVTRAIN-146_AEM-Configuration-with-CONGA.pdf)
+Presentation: [DATM-58_AEM-Configuration-with-CONGA.pdf](slides/DATM-58_AEM-Configuration-with-CONGA.pdf)
 
-Exercises: [PVTRAIN-148 CONGA exercises](PVTRAIN-148-CONGA-exercises.html)
+Exercises: [DATM-59 CONGA exercises](DATM-59-CONGA-exercises.html)
 
 ### Further links
 

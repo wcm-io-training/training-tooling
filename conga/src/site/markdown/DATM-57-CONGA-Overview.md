@@ -1,4 +1,4 @@
-## PVTRAIN-145 CONGA Overview
+## DATM-57 CONGA Overview
 
 ### Agenda
 
@@ -14,9 +14,9 @@
 
 ### Training Material
 
-Presentation: [PVTRAIN-145_CONGA-Overview.pdf](slides/PVTRAIN-145_CONGA-Overview.pdf)
+Presentation: [DATM-57_CONGA-Overview.pdf](slides/DATM-57_CONGA-Overview.pdf)
 
-Exercises: [PVTRAIN-148 CONGA exercises](PVTRAIN-148-CONGA-exercises.html)
+Exercises: [DATM-59 CONGA exercises](DATM-59-CONGA-exercises.html)
 
 ### Further links
 

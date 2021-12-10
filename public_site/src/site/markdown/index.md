@@ -2,7 +2,7 @@
 
 Training materials for wcm.io and subprojects.
 
-All trainings are provided by [pro!vision GmbH](https://www.pro-vision.de/).
+All trainings are provided by [diva-e](https://diva-e.com/).
 
 
 ### Trainings

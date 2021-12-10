@@ -4,7 +4,7 @@ Training materials for [wcm.io Context-Aware Configuration](https://wcm.io/cacon
 
 ### Training modules
 
-* [PVTRAIN-167 wcm.io Context-Aware Configuration](PVTRAIN-167-wcm.io-Context-Aware-Configuration.html)
-* [PVTRAIN-168 Context-Aware Configuration exercises](PVTRAIN-168-Context-Aware-Configuration-exercises.html)
+* [DATM-55 wcm.io Context-Aware Configuration](DATM-55-wcm.io-Context-Aware-Configuration.html)
+* [DATM-56 Context-Aware Configuration exercises](DATM-56-Context-Aware-Configuration-exercises.html)
 
-The trainings are provided by [pro!vision GmbH](https://www.pro-vision.de/).
+The trainings are provided by [diva-e](https://diva-e.com/).

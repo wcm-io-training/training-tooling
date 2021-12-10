@@ -1,10 +1,10 @@
-## PVTRAIN-168 Context-Aware Configuration exercises
+## DATM-56 Context-Aware Configuration exercises
 
 ## Overview
 
 These exercises target the following training modules:
 
-* [PVTRAIN-167 wcm.io Context-Aware Configuration](PVTRAIN-167-wcm.io-Context-Aware-Configuration.html)
+* [DATM-55 wcm.io Context-Aware Configuration](DATM-55-wcm.io-Context-Aware-Configuration.html)
 
 ## Git projects
 
@@ -14,4 +14,4 @@ These exercises target the following training modules:
 
 The exercise steps:
 
-* [PVTRAIN-168-02 AEM Context-Aware Configuration](PVTRAIN-168-02-AEM-Context-Aware-Configuration.html)
+* [DATM-56-02 AEM Context-Aware Configuration](DATM-56-02-AEM-Context-Aware-Configuration.html)

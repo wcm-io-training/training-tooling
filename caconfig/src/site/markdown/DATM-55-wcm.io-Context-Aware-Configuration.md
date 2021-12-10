@@ -1,4 +1,4 @@
-## PVTRAIN-167 wcm.io Context-Aware Configuration
+## DATM-55 wcm.io Context-Aware Configuration
 
 ### Agenda
 
@@ -13,9 +13,9 @@
 
 ### Training Material
 
-Presentation: [PVTRAIN-167_wcm.io-Context-Aware-Configuration.pdf](slides/PVTRAIN-167_wcm.io-Context-Aware-Configuration.pdf)
+Presentation: [DATM-55_wcm.io-Context-Aware-Configuration.pdf](slides/DATM-55_wcm.io-Context-Aware-Configuration.pdf)
 
-Exercises: [PVTRAIN-168 Context-Aware Configuration exercises](PVTRAIN-168-Context-Aware-Configuration-exercises.html)
+Exercises: [DATM-56 Context-Aware Configuration exercises](DATM-56-Context-Aware-Configuration-exercises.html)
 
 ### Further links
 
