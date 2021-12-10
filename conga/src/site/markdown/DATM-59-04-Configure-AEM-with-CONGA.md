@@ -40,28 +40,12 @@ Validation:
     *   `definition/target/configuration/development`
     *   `environment/target/configuration/prod`
 
-#### B) Enable CRXDE Lite / DavEx Servlet
+#### B) Deploy Groovy Console on Author
 
 Exercise:
 
-1.  By default, CRXDE Lite is disabled on an AEM instance started in "nosamplecontent" = production mode
-2.  This can be enabled as described described here: [Enabling CRXDE Lite in AEM](https://docs.adobe.com/docs/en/aem/6-2/administer/security/security-checklist/enabling-crxde-lite.html)
-3.  This OSGi configuration is also included in the CONGA AEM Definitions, but it is switched off by default
-4.  Task: Find out the correct CONGA configuration parameter for this in [https://github.com/wcm-io-devops/conga-aem-definitions/tree/develop/conga-aem-definitions](https://github.com/wcm-io-devops/conga-aem-definitions/tree/develop/conga-aem-definitions)
-5.  Enable CRXDE Lite for all nodes of the local environment `development.yaml` (the config definition which is used for the local deployment)
-6.  Redeploy the application and configuration to your local AEM instance
-
-Validation:
-
-*   Open [http://localhost:4502/crx/de](http://localhost:4502/crx/de) and ensure you can see the whole content tree
-*   Look for the OSGi configuration file `/apps/aem-cms-system-config/config.author/org.apache.sling.jcr.davex.config` in the repository and ensure it exists
-
-#### C) Deploy Groovy Console on Author
-
-Exercise:
-
-1.  Citytech (recently aquired by Olsen Digital, now ICF Next) has published a nice tool for AEM: The "AEM Groovy Console": [https://github.com/icfnext/aem-groovy-console](https://github.com/icfnext/aem-groovy-console)
-2.  The AEM ZIP package for deploying it is also available on Maven Central: [https://repo1.maven.org/maven2/com/icfolson/aem/groovy/console/aem-groovy-console/13.0.0/](https://repo1.maven.org/maven2/com/icfolson/aem/groovy/console/aem-groovy-console/13.0.0/)
+1.  There is a nice Open Source tool for AEM, the "AEM Groovy Console": [https://github.com/CID15/aem-groovy-console](https://github.com/CID15/aem-groovy-console)
+2.  The AEM ZIP package for deploying it is also available on Maven Central: [https://repo1.maven.org/maven2/org/cid15/aem/groovy/console/aem-groovy-console-all/17.0.0/](https://repo1.maven.org/maven2/org/cid15/aem/groovy/console/aem-groovy-console-all/17.0.0/)
 3.  Please extend the role `wcm-io-samples-cms` to include a deployment of this Groovy Console Package
 4.  Make the deployment of this file conditional using a configuration parameter, similar as it is already done for the sample content in the same role
 5.  Deploy the Groovy Console only for the author node of the local environment `development.yaml`
@@ -71,14 +55,12 @@ Validation:
 
 *   Open [http://localhost:4502/apps/groovyconsole.html](http://localhost:4502/apps/groovyconsole.html) - the Groovy Console should be displayed
 
-#### D) Restrict Access to Groovy Console to Administrators
+#### C) Restrict Access to Groovy Console to Administrators
 
 Preparation - create two new users:
 
 * Create a new non-admin user "author" with password "author" at http://localhost:4502/security/users.html
   * Assign this user to group "Authors" (content-authors)
-* Create a new admin user "admin2" with password "admin2" at http://localhost:4502/security/users.html
-  * Assign this user to group "Administrators" (administrators)
 
 Exercise:
 
@@ -89,14 +71,28 @@ Exercise:
 Validation:
 
 *  Log into AEM using the author user
-*  Open the Groovy Console http://localhost:4502/apps/groovyconsole.html - you should not longer be allowed to open or execute scripts
-*  Log into AEM using the admin2 user
-*  Open the Groovy Console http://localhost:4502/apps/groovyconsole.html - you can open scripts and execute them
-  * e.g. the "samples/ListTemplates.groovy" script - you have to replace `/content/we-retail` with `/content/wcm-io-samples/en`
+*  Open the Groovy Console http://localhost:4502/apps/groovyconsole.html
+*  Try to execute this script:
+```
+def templates = [] as TreeSet
+ 
+getPage("/content/wcm-io-samples/en").recurse { page ->
+    def template = page?.template?.path
+ 
+    if (template) {
+        templates.add(template)
+    }
+}
+ 
+templates.each {
+    println it
+}
+```
+*  Log into AEM using the admin user
+*  Open the Groovy Console http://localhost:4502/apps/groovyconsole.html
+*  Try to execute the sample from above
 
-Please note: once an allowed group is configured the "admin" user itself cannot longer execute scripts - this is a bug in the Groovy Console ([#86](https://github.com/icfnext/aem-groovy-console/issues/86)). That's why we use "admin2" for validation.
-
-#### E) Add additional logfile for JCR Query Debugging
+#### D) Add additional logfile for JCR Query Debugging
 
 Exercise:
 
@@ -112,7 +108,7 @@ Validation:
 *   Ensure a `query.log` exists in the local AEM directory `crx-quickstart/logs`
 *   Execute any query in AEM or CRXDE Lite an ensure new log entries are written in this log (please note that several AEM background services also execute queries form time to time, so you will see a log of other messages as well)
 
-#### F) Make the languages displayed in AEM translator configurable
+#### E) Make the languages displayed in AEM translator configurable
 
 Exercise:
 
@@ -131,7 +127,7 @@ Validation:
 *   Open [http://localhost:4502/libs/cq/i18n/translator.html](http://localhost:4502/libs/cq/i18n/translator.html) - you should see for columns with translations labelled DE, EN, FR, IT
 
 
-#### G) Add ACLs for translator language configuration
+#### F) Add ACLs for translator language configuration
 
 Exercise:
 
