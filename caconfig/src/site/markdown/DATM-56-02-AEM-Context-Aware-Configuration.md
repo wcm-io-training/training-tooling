@@ -12,7 +12,7 @@
 
 ### Introduction
 
-Deploy the application to your local AEM 6.3 instance running on port 4502 via the script `clean_install_deploy_package.sh`.
+Deploy the application to your local AEM instance running on port 4502 via the script `build-deploy.sh`.
 
 The repository contains a simple AEM application with:
 
