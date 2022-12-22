@@ -128,7 +128,7 @@
     </menu>
     <menu name="Contribute" inherit="top">
       <item name="Contribute" href="https://wcm.io/contribute.html" />
-      <item name="Issues" href="https://wcm-io.atlassian.net" />
+      <item name="Issues" href="https://github.com/wcm-io-training" />
       <item name="Wiki" href="https://wcm-io.atlassian.net/wiki/" />
       <item name="Mailing Lists" href="https://wcm.io/mailing-lists.html" />
       <item name="Fork on GitHub" href="http://github.com/wcm-io-training" />
