@@ -19,15 +19,12 @@
   #L%
   -->
 
-<project name="training.wcm.io"
-  xmlns="http://maven.apache.org/DECORATION/1.8.0"
+<site name="training.wcm.io"
+  xmlns="http://maven.apache.org/SITE/2.0.0"
   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/DECORATION/1.8.0 https://maven.apache.org/xsd/decoration-1.8.0.xsd">
+  xsi:schemaLocation="http://maven.apache.org/SITE/2.0.0 https://maven.apache.org/xsd/site-2.0.0.xsd">
 
-  <bannerLeft>
-    <name><![CDATA[<img src="https://wcm.io/images/favicon-16@3x.png"/> wcm.io Training]]></name>
-    <href>https://training.wcm.io</href>
-  </bannerLeft>
+  <bannerLeft name="&lt;img src='https://wcm.io/images/favicon-16@3x.png'/&gt; wcm.io Training" href="https://training.wcm.io"/>
 
   <publishDate position="bottom" format="yyyy-MM-dd" />
   <version position="bottom" />
@@ -35,7 +32,7 @@
   <skin>
     <groupId>io.wcm.maven.skins</groupId>
     <artifactId>reflow-maven-skin</artifactId>
-    <version>1.2.0</version>
+    <version>1.3.2</version>
   </skin>
   <custom>
     <reflowSkin>
@@ -136,4 +133,4 @@
     <menu name="Maven documentation" inherit="top" ref="reports"/>
   </body>
 
-</project>
+</site>
