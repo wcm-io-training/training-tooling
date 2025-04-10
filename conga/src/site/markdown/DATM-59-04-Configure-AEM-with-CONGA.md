@@ -44,8 +44,8 @@ Validation:
 
 Exercise:
 
-1.  There is a nice Open Source tool for AEM, the "AEM Groovy Console": [https://github.com/CID15/aem-groovy-console](https://github.com/CID15/aem-groovy-console)
-2.  The AEM ZIP package for deploying it is also available on Maven Central: [https://repo1.maven.org/maven2/org/cid15/aem/groovy/console/aem-groovy-console-all/17.0.0/](https://repo1.maven.org/maven2/org/cid15/aem/groovy/console/aem-groovy-console-all/17.0.0/)
+1.  There is a nice Open Source tool for AEM, the "AEM Groovy Console": [https://github.com/orbinson/aem-groovy-console](https://github.com/orbinson/aem-groovy-console)
+2.  The AEM ZIP package for deploying it is also available on Maven Central: [https://repo1.maven.org/maven2/be/orbinson/aem/aem-groovy-console-all/](https://repo1.maven.org/maven2/be/orbinson/aem/aem-groovy-console-all/)
 3.  Please extend the role `wcm-io-samples-cms` to include a deployment of this Groovy Console Package
 4.  Make the deployment of this file conditional using a configuration parameter, similar as it is already done for the sample content in the same role
 5.  Deploy the Groovy Console only for the author node of the local environment `development.yaml`
