@@ -4,28 +4,23 @@ name: Build
 
 on:
   push:
-    branches-ignore:
-      - experimental/**
+    branches:
+      - master
   pull_request:
-    branches-ignore:
-      - experimental/**
   workflow_dispatch:
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        java: [21]
+        os: [ubuntu-latest]
+        distribution: [temurin]
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v5
-
-      - name: Setup JDK
-        uses: actions/setup-java@v5
+      - name: Maven Build
+        uses: wcm-io-devops/github-action-maven-build@v1
         with:
-          distribution: temurin
-          java-version: 21
-          cache: maven
-
-      - name: Build and verify
-        run: mvn -s ./.maven-settings.xml -Pcontinuous-integration -B -U clean verify
+          java-version: ${{ matrix.java }}
